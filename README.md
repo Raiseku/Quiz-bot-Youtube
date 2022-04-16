@@ -1,9 +1,13 @@
 # Quiz-bot-Youtube
 
 The bot will be able to respond to the following commands:
+
 /start will describe what the bot can do
+
 /time will give the date and time of when that command was executed
+
 /weather CITY will give the weather forecast for the entered city
+
 /quiz will allow you to play a very simple quiz against the bot
 
 _______________________________________________________
