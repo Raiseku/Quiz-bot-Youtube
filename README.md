@@ -1,4 +1,4 @@
-# Quiz-bot-Youtube
+# Tegram-Quiz-bot
 
 The bot will be able to respond to the following commands:
 
