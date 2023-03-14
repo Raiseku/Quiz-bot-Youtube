@@ -1,77 +1,29 @@
-# Quiz-bot-Youtube
+# **Telegram Quiz Bot**
 
-The bot will be able to respond to the following commands:
+This Python project is a simple Telegram bot that can interact with users and provides the following functionalities:
 
-/start will describe what the bot can do
+- /start command: sends a welcome message with instructions about how to use the bot.
+- /time command: returns the current date and time.
+- /weather CITY command: returns the current weather for the specified city.
+- /quiz command: starts a quiz with a single arithmetic operation (currently addition).
 
-/time will give the date and time of when that command was executed
+This bot was built using the following libraries:
 
-/weather CITY will give the weather forecast for the entered city
+- **`telethon`**: a Python 3 MTProto library to interact with Telegram's API.
+- **`configparser`**: a library for reading from a configuration file.
+- **`random`**: a library for generating random numbers.
+- **`datetime`**: a library used to get the current date and time.
+- **`requests`**: a library used to make requests to external services (in this case, the OpenWeatherMap API to retrieve weather data).
 
-/quiz will allow you to play a very simple quiz against the bot
+## **Getting started**
 
-_______________________________________________________
-### HOW TO GET THE WEATHER FORECAST API
+Before using the bot, you need to configure your access credentials in the **`config.ini`** file. You need to set the following parameters:
 
-Get one at: https://openweathermap.org/api
+- **`api_id`**: your Telegram API ID.
+- **`api_hash`**: your Telegram API hash.
+- **`BOT_TOKEN`**: the token of your Telegram bot.
+- **`weather_key`**: the API key for OpenWeatherMap.
 
-Example request for weather forecast on the city of Rome: http://api.openweathermap.org/data/2.5/weather?appid=YOUR_APId&q=rome
+You can obtain a Telegram API ID and hash by following the instructions **[here](https://core.telegram.org/api/obtaining_api_id)**. To obtain a bot token, you can talk to **[BotFather](https://telegram.me/botfather)** on Telegram. Finally, you can sign up for a free API key for OpenWeatherMap **[here](https://home.openweathermap.org/users/sign_up)**.
 
-Example Response
-{
-  "coord": {
-    "lon": -85.1647,
-    "lat": 34.257
-  },
-  "weather": [
-    {
-      "id": 800,
-      "main": "Clear",
-      "description": "clear sky",
-      "icon": "01d"
-    }
-  ],
-  "base": "stations",
-  "main": {
-    "temp": 298.25,
-    "feels_like": 297.44,
-    "temp_min": 297.13,
-    "temp_max": 298.98,
-    "pressure": 1019,
-    "humidity": 24
-  },
-  "visibility": 10000,
-  "wind": {
-    "speed": 6.17,
-    "deg": 130,
-    "gust": 8.75
-  },
-  "clouds": {
-    "all": 0
-  },
-  "dt": 1650050672,
-  "sys": {
-    "type": 2,
-    "id": 2038061,
-    "country": "US",
-    "sunrise": 1650020953,
-    "sunset": 1650067901
-  },
-  "timezone": -14400,
-  "id": 4219762,
-  "name": "Rome",
-  "cod": 200
-}
-
-
-_______________________________________________________
-### HOW TO GET API_ID AND API_HASH FOR TELETHON
-
-Follow the instruction at: https://my.telegram.org/auth
-
-
-_______________________________________________________
-### HOW TO GET THE BOT_TOKEN
-
-Write on telegram to @BotFather and follow the instruction
-
+Once you have set up your credentials and installed all the libraries, you can run the script by executing **`python bot.py`**.
