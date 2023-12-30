@@ -24,7 +24,7 @@ weather_key = config.get('default','weather_key') # read the key for the weather
 client = TelegramClient('sessions/session_master', api_id, api_hash).start(bot_token=BOT_TOKEN)
 
 # Define the /start command
-@client.on(events.NewMessage(pattern='/(?i)start')) 
+@client.on(events.NewMessage(pattern='(?i)/start')) 
 async def start(event):
     sender = await event.get_sender()
     SENDER = sender.id
@@ -37,7 +37,7 @@ async def start(event):
 
 
 ### First command, get the time and day
-@client.on(events.NewMessage(pattern='/(?i)time')) 
+@client.on(events.NewMessage(pattern='(?i)/time')) 
 async def time(event):
     # Get the sender of the message
     sender = await event.get_sender()
@@ -50,7 +50,7 @@ async def time(event):
 
 
 ### Command to get the weather
-@client.on(events.NewMessage(pattern='/(?i)weather')) 
+@client.on(events.NewMessage(pattern='(?i)/weather')) 
 async def weather(event):
 
     # Get the sender of the message
@@ -97,7 +97,7 @@ def press_event(user_id):
 
 
 ### Quiz command
-@client.on(events.NewMessage(pattern='/(?i)quiz')) 
+@client.on(events.NewMessage(pattern='(?i)/quiz')) 
 async def quiz(event):
     # get the sender
     sender = await event.get_sender()
